@@ -1,0 +1,51 @@
+.nav {
+    height: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px 0 26px;
+    position: relative;
+    margin-bottom: 61px;
+}
+
+.header, 
+.nav_menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav button {
+    margin-left: 59px;
+    width: 129px;
+    height: 49px;
+    border: 2px solid #339933;
+    border-radius: 5px;
+    background-color: #339933;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.nav_menu {
+    gap: 57px;
+    padding: 0 28px;
+}
+
+.nav_menu a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.nav_menu a:hover {
+    color: #339933;
+}
+
+.cart_icon {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+}
