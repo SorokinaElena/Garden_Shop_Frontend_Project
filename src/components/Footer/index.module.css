@@ -1,0 +1,65 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    padding: 0 32px 32px 32px;
+}
+
+.contacts {
+    min-width: 810px;
+}
+
+.address {
+    min-width: 556px;
+}
+
+.footer h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.contacts h3 {
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.contacts .messengers {
+    display: flex;
+    gap: 33px;
+}
+
+.contacts .messenger_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacts .messenger_icon {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.contacts .messenger_item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.address h3 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.address h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.address p {
+    font-size: 24px;
+    font-weight: 600;
+}
+

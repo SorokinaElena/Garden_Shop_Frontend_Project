@@ -20,7 +20,7 @@ export default function Nav() {
         <div className={s.nav_menu}>
             <a href="#categories">Categories</a>
             <a href="#coupon">Coupon</a>
-            <a href="#special_offers">Special offer</a>
+            <a href="#special_offers">Special offers</a>
             <a href="#contacts">Contacts</a>
             <Link to='cart'>
                 <img src={cart_icon} className={s.cart_icon} alt="Cart" />
