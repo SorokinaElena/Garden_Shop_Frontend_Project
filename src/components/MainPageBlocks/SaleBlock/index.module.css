@@ -2,3 +2,53 @@
     height: 600px;
     background-color: #A1E2EB;
 }
+
+.sale_block .content {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.sale_block .content .info {
+    padding: 130px 0 0 50px;
+}
+
+.sale_block .content .info h2 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 104px;
+    color: #FFFFFF;
+    margin-bottom: 3px;
+}
+
+.sale_block .content .info h3 {
+    font-weight: 700;
+    font-size: 63px;
+    line-height: 82px;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+
+.sale_block .content .info .btn_container {
+    display: flex;
+    gap: 10px;
+}
+
+.sale_block .content .info button {
+    width: 241px;
+    height: 82px;
+    background: none;
+    border: 5px solid #FFFFFF;
+    border-radius: 13px;
+    /* transition: 1; */
+    font-weight: 700;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.sale_block .content .img {
+    position: absolute;
+    right: 0;
+    top: -79px;
+}
