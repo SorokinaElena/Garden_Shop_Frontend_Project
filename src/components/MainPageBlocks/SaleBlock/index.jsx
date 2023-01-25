@@ -3,6 +3,6 @@ import s from './index.module.css';
 
 export default function SaleBlock() {
   return (
-    <div className={s.sale_block}>SaleBlock</div>
+    <section className={s.sale_block}>SaleBlock</section>
   )
 }

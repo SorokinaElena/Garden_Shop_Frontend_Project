@@ -4,11 +4,11 @@ import logo from './data/logo.svg';
 import cart_icon from './data/cart_icon.svg';
 import { Link } from 'react-router-dom';
 
-export default function Nav() {
+export default function Header() {
   return (
-    <nav className={s.nav}>
+    <header className={s.header}>
 
-        <div className={s.header}>
+        <div className={s.header_item}>
             <Link to='/'>
                 <img src={logo} alt="Logo" />
             </Link>
@@ -17,7 +17,7 @@ export default function Nav() {
             </Link>
         </div>
 
-        <div className={s.nav_menu}>
+        <nav className={s.nav_menu}>
             <a href="#categories">Categories</a>
             <a href="#coupon">Coupon</a>
             <a href="#special_offers">Special offers</a>
@@ -25,8 +25,8 @@ export default function Nav() {
             <Link to='cart'>
                 <img src={cart_icon} className={s.cart_icon} alt="Cart" />
             </Link>
-        </div>
+        </nav>
 
-    </nav>
+    </header>
   )
 }
