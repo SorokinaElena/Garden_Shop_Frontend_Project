@@ -10,7 +10,9 @@ export default function SaleBlock() {
           <h2>Sale</h2>
           <h3>New season sale</h3>
           <div className={s.btn_container}>
-            <button>All offers</button>
+            <a href="#special_offers">
+              <button>All offers</button>
+            </a>
             <button>See more</button>
           </div>
         </div>
