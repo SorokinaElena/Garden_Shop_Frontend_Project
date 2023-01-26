@@ -1,0 +1,26 @@
+.category_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+.category_card img {
+    width: 318px;
+    height: 350px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+.category_card:hover {
+    transform: scale(1.05);
+    transition: all .4s ease; 
+}
+
+.category_card p {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+}

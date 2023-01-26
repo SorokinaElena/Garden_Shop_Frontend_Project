@@ -1,3 +1,33 @@
 .categories_block {
     height: 617px;
+    /* padding: 40px 33px 112px 33px; */
+    padding: 40px 0px 112px 50px;
+}
+
+.categories_block_header {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.categories_block h2 {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+}
+
+.categories_block button {
+    width: 120px;
+    height: 31px;
+    border: 2px solid #8B8B8B;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    color: #8B8B8B;
+    cursor: pointer;
+}
+
+.categories_block button:hover {
+    transform: scale(1.05);
+    transition: all .4s ease; 
 }
