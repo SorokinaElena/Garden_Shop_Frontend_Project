@@ -14,7 +14,7 @@
     padding: 130px 0 0 50px;
 }
 
-.sale_block .content .info h2 {
+.sale_block .content .info h1 {
     font-weight: 700;
     font-size: 80px;
     line-height: 104px;
@@ -44,6 +44,7 @@
     font-weight: 700;
     font-size: 25px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .sale_block .content .info button:hover {

@@ -10,12 +10,6 @@
     gap: 26px;
 }
 
-.categories_block h2 {
-    font-weight: 700;
-    font-size: 40px;
-    letter-spacing: 0.03em;
-}
-
 .categories_block button {
     width: 120px;
     height: 31px;

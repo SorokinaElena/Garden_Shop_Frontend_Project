@@ -17,3 +17,9 @@
     min-width: 1440px;
     margin: 0 auto;
 }
+
+h2 {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+}

@@ -7,7 +7,7 @@ export default function SaleBlock() {
     <section className={s.sale_block}>
       <div className={['content_wrapper', s.content].join(' ')}>
         <div className={s.info}>
-          <h2>Sale</h2>
+          <h1>Sale</h1>
           <h3>New season sale</h3>
           <div className={s.btn_container}>
             <a href="#special_offers">

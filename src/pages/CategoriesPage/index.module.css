@@ -1,0 +1,15 @@
+.categories_page {
+    padding: 0 33px;
+}
+
+.categories_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 32px;
+    row-gap: 58px;
+    margin-bottom: 40px;
+}
+
+.categories_page h2 {
+    margin-bottom: 81px;
+}
