@@ -3,18 +3,18 @@
     background-color: #A1E2EB;
 }
 
-.sale_block .content {
+.content {
     display: flex;
     justify-content: space-between;
 
     position: relative;
 }
 
-.sale_block .content .info {
+.info {
     padding: 130px 0 0 50px;
 }
 
-.sale_block .content .info h1 {
+.info h1 {
     font-weight: 700;
     font-size: 80px;
     line-height: 104px;
@@ -22,7 +22,7 @@
     margin-bottom: 3px;
 }
 
-.sale_block .content .info h3 {
+.info h3 {
     font-weight: 700;
     font-size: 63px;
     line-height: 82px;
@@ -30,12 +30,12 @@
     margin-bottom: 60px;
 }
 
-.sale_block .content .info .btn_container {
+.btn_container {
     display: flex;
     gap: 10px;
 }
 
-.sale_block .content .info button {
+.btn_container button {
     width: 241px;
     height: 82px;
     background: none;
@@ -47,13 +47,13 @@
     cursor: pointer;
 }
 
-.sale_block .content .info button:hover {
+.btn_container button:hover {
     background: #FFFFFF;;
     color: #2D2D2D;
     transition: all .4s ease; 
 }
 
-.sale_block .content .img {
+.sale_block img {
     position: absolute;
     right: 0;
     top: -79px;

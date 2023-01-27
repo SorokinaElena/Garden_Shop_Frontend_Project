@@ -14,8 +14,6 @@
 }
 
 .footer h2 {
-    /* font-size: 40px;
-    font-weight: 700; */
     margin-bottom: 25px;
     letter-spacing: normal;
 }
@@ -26,23 +24,23 @@
     margin-bottom: 32px;
 }
 
-.contacts .messengers {
+.messengers {
     display: flex;
     gap: 33px;
 }
 
-.contacts .messenger_item {
+.messenger_item {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.contacts .messenger_icon {
+.messenger_icon {
     font-size: 44px;
     margin-bottom: 10px;
 }
 
-.contacts .messenger_item p {
+.messenger_item p {
     font-size: 15px;
     font-weight: 600;
 }

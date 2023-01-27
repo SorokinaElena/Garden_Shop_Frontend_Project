@@ -16,9 +16,7 @@ export default function SaleBlock() {
             <button>See more</button>
           </div>
         </div>
-        <div className={s.img}>
-          <img src={sale_image} alt="Picture" />
-        </div>
+        <img src={sale_image} alt="Picture" />
       </div>
     </section>
   )
