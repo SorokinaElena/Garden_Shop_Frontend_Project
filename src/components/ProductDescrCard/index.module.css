@@ -1,0 +1,55 @@
+.product_descr_card {
+    display: flex;
+    padding-right: 57px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    color: #3A3A3A;
+    margin: 58px 0 34px 0;
+}
+
+.product_descr_card img {
+    width: 710px;
+    height: 710px;
+    margin: 4px 58px 3px 58px;
+}
+
+.descr_container {
+    padding-left: 70px;
+}
+
+.descr_container button {
+    width: 397px;
+    height: 86px;
+    background: #339933;
+    border: 2px solid #339933;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.descr_container button:hover {
+    transform: scale(1.05);
+    transition: all .4s ease; 
+}
+
+.descr_container h4, p {
+    font-size: 20px;
+    letter-spacing: 0.03em;
+}
+
+.descr_container h4 {
+    font-weight: 600;
+    margin: 66px 0 15px 0;
+}
+
+.descr {
+    font-weight: 500;
+    line-height: 26px;
+    text-align: justify;
+}

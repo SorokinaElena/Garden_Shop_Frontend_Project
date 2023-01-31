@@ -67,8 +67,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
+https://github.com/HaykInanc/telran_project_backend
+
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
+https://www.figma.com/file/2GVvDlER4OFswjR0KOShPn/Garden-(Copy)?node-id=384%3A17&t=zAg7ZYcxyQijlQEn-0
 https://html5book.ru/css3-gradient
 https://react-icons.github.io/react-icons/search?q=bag

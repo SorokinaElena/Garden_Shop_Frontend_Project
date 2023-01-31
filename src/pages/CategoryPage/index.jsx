@@ -25,18 +25,18 @@ export default function CategoryPage() {
     dispatch(getCategoryProducts(category))
   }, []);
 
+  const page_name = 'category_page'
 
   return (
     <div className={['content_wrapper', s.category_page].join(' ')}>
       <h2>
         {
-          target_category[0].title
-          // target_category.length !== 0 ? target_category[0].title : ''
+          target_category.length !== 0 ? target_category[0].title : ''
         }
       </h2>
       <div className={s.category_products_container}>
         {
-          categoryProducts.map(el => <ProductCard key={el.id} {...el}/>)
+          categoryProducts.map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)
         }
       </div>
     </div>

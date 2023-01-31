@@ -16,6 +16,7 @@ export default function CategoriesPage() {
     dispatch(getCategories)
   }, []);
 
+
   return (
     <div className={['content_wrapper', s.categories_page].join(' ')}>
       <h2>Categories</h2>

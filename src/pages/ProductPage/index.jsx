@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import s from './index.module.css';
+import { getProduct } from '../../requests/getProduct';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import ProductDescrCard from '../../components/ProductDescrCard';
+import { getAllProducts } from '../../requests/getAllProducts';
 
 export default function ProductPage() {
+
+  const dispatch = useDispatch();
+
+  const {id} = useParams();
+
+  const product = useSelector(state => state.product);
+  const all_products = useSelector(state => state.all_products);
+
+  useEffect(() => {
+    dispatch(getProduct(id))
+  }, []);
+
+  useEffect(() => {
+    dispatch(getAllProducts)
+  }, []);
+
+  const page_name = 'product_page'
+
   return (
-    <div>ProductPage</div>
+    <div className={['content_wrapper', s.product_page].join(' ')}>
+      {
+        product.map(el => <ProductDescrCard key={el} {...el} page_name={page_name}/>)
+      }
+    </div>
   )
 }
