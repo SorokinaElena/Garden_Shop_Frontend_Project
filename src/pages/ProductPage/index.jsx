@@ -13,15 +13,13 @@ export default function ProductPage() {
   const {id} = useParams();
 
   const product = useSelector(state => state.product);
-  const all_products = useSelector(state => state.all_products);
+  
 
   useEffect(() => {
     dispatch(getProduct(id))
   }, []);
 
-  useEffect(() => {
-    dispatch(getAllProducts)
-  }, []);
+  
 
   const page_name = 'product_page'
 

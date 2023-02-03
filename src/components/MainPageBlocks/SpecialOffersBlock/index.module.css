@@ -1,3 +1,15 @@
 .special_offers_block {
+    padding: 0 50px;
     height: 658px;
+    display: flex;
+    flex-direction: column;
+}
+
+.special_offers_block > div {
+    display: flex;
+    gap: 40px;
+}
+
+.special_offers_block h2 {
+    margin: 50px 0 20px 0;
 }
