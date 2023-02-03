@@ -8,13 +8,7 @@ import CategoryCard from '../../components/CategoryCard';
 
 export default function CategoriesPage() {
 
-  const dispatch = useDispatch();
-
   const categories = useSelector(state => state.categories);
-
-  useEffect(() => {
-    dispatch(getCategories)
-  }, []);
 
 
   return (

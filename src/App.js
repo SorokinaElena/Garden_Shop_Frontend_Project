@@ -6,6 +6,7 @@ import CartPage from './pages/CartPage';
 import CategoriesPage from './pages/CategoriesPage';
 import CategoryPage from './pages/CategoryPage';
 import ProductPage from './pages/ProductPage';
+import SpecialOffersPage from './pages/SpecialOffersPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path='categories/:category' element={<CategoryPage />} />
                 <Route path='products/:id' element={<ProductPage />} />
                 <Route path='cart' element={<CartPage />} />
+                <Route path='sale' element={<SpecialOffersPage />} />
             </Route>
         </Routes>
     </div>

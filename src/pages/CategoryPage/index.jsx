@@ -5,6 +5,7 @@ import { getCategoryProducts } from '../../requests/getCategoryProducts';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getCategories } from '../../requests/getCategories';
+import SortForm from '../../components/SortForm';
 
 export default function CategoryPage() {
 
@@ -34,6 +35,7 @@ export default function CategoryPage() {
           target_category.length !== 0 ? target_category[0].title : ''
         }
       </h2>
+      <SortForm />
       <div className={s.category_products_container}>
         {
           categoryProducts.map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)
