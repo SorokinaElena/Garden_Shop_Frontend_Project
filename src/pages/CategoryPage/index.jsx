@@ -5,7 +5,10 @@ import { getCategoryProducts } from '../../requests/getCategoryProducts';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getCategories } from '../../requests/getCategories';
-import SortForm from '../../components/SortForm';
+import PriceSortForm from '../../components/SortBlocks/PriceSortForm';
+import CheckboxSortForm from '../../components/SortBlocks/CheckboxSortForm';
+import SelectSortForm from '../../components/SortBlocks/SelectSortForm';
+import { selectCategoryProducts } from '../../store/reducers/categoryProductsReducer';
 
 export default function CategoryPage() {
 
@@ -26,7 +29,14 @@ export default function CategoryPage() {
     dispatch(getCategoryProducts(category))
   }, []);
 
-  const page_name = 'category_page'
+  const page_name = 'category_page';
+
+  const select_category_products = (event) => 
+  dispatch(selectCategoryProducts({
+    id: event.target.id,
+    value: event.target.value,
+  }));
+  
 
   return (
     <div className={['content_wrapper', s.category_page].join(' ')}>
@@ -35,7 +45,12 @@ export default function CategoryPage() {
           target_category.length !== 0 ? target_category[0].title : ''
         }
       </h2>
-      <SortForm />
+      <div className={s.sort_form}>
+        <PriceSortForm />
+        <CheckboxSortForm />
+        <SelectSortForm select_category_products={select_category_products} />
+      </div>
+      
       <div className={s.category_products_container}>
         {
           categoryProducts.map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)

@@ -1,0 +1,30 @@
+.price_sort {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.price_sort form {
+    display: flex;
+    gap: 15px;
+}
+
+.price_sort input {
+    width: 103px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    padding: 10px 0 10px 10px;
+    background: #E5E5E5;
+
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+}
+
+.price_sort input::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    color:  #ACACAC;
+    letter-spacing: 0.03em;
+}
