@@ -3,9 +3,13 @@ let firstState = [];
 
 const LOAD_CATEGORY_PRODUCTS = 'LOAD_CATEGORY_PRODUCTS';
 const SELECT_CATEGORY_PRODUCTS = 'SELECT_CATEGORY_PRODUCTS';
+const GET_DISCONT_CATEGORY_PRODUCTS = 'GET_DISCONT_CATEGORY_PRODUCTS';
+const PRICE_SORT_CATEGORY_PRODUCTS = 'PRICE_SORT_CATEGORY_PRODUCTS';
 
 export const loadCategoryProducts = (payload) => ({type: LOAD_CATEGORY_PRODUCTS, payload});
 export const selectCategoryProducts = (payload) => ({type: SELECT_CATEGORY_PRODUCTS, payload});
+export const getDiscontCategoryProducts = (payload) => ({type: GET_DISCONT_CATEGORY_PRODUCTS, payload});
+export const priceSortCategoryProducts = (payload) => ({type: PRICE_SORT_CATEGORY_PRODUCTS, payload});
 
 export const categoryProductsReducer = (state = defaultState, action) => {
     if (action.type === LOAD_CATEGORY_PRODUCTS) {
@@ -24,7 +28,38 @@ export const categoryProductsReducer = (state = defaultState, action) => {
             }
         }
         return [...state]
+    } else if (action.type === GET_DISCONT_CATEGORY_PRODUCTS) {
+        if (action.payload === false) {
+            // console.log(action.payload)
+        return firstState
     } else {
+        // return [...state].filter(el => el.price !== el.discont_price)
+        return [...state].filter(el => el.discont_price > 50)
+    }
+    } else if (action.type === PRICE_SORT_CATEGORY_PRODUCTS) {
+        const {min_value, max_value} = action.payload
+        return state.map(el => {
+            if (el.discont_price >= min_value && el.discont_price <= max_value) {
+                el.hide_price_mark = false
+            } else {
+                el.hide_price_mark = true
+            }
+            return el
+        })
+    }
+
+    
+    // {
+    //     const {min_value, max_value} = action.payload
+    //     return state.map(el => {
+    //         if (el.discont_price >= min_value && el.discont_price <= max_value) {
+    //             el.hide = false
+    //         } else {
+    //             el.hide = true
+    //         }
+    //     })
+    // }
+    else {
         return state
     }
     

@@ -9,6 +9,8 @@ import PriceSortForm from '../../components/SortBlocks/PriceSortForm';
 import CheckboxSortForm from '../../components/SortBlocks/CheckboxSortForm';
 import SelectSortForm from '../../components/SortBlocks/SelectSortForm';
 import { selectCategoryProducts } from '../../store/reducers/categoryProductsReducer';
+import { getDiscontCategoryProducts } from '../../store/reducers/categoryProductsReducer';
+// import { priceSortCategoryProducts } from '../../store/reducers/categoryProductsReducer';
 
 export default function CategoryPage() {
 
@@ -36,7 +38,9 @@ export default function CategoryPage() {
     id: event.target.id,
     value: event.target.value,
   }));
-  
+
+  const get_discont_category_products = (event) => dispatch(getDiscontCategoryProducts(event.target.checked));
+
 
   return (
     <div className={['content_wrapper', s.category_page].join(' ')}>
@@ -47,13 +51,15 @@ export default function CategoryPage() {
       </h2>
       <div className={s.sort_form}>
         <PriceSortForm />
-        <CheckboxSortForm />
+        <CheckboxSortForm get_discont_category_products={get_discont_category_products} />
         <SelectSortForm select_category_products={select_category_products} />
       </div>
       
       <div className={s.category_products_container}>
         {
-          categoryProducts.map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)
+          categoryProducts
+            .filter(el => !el.hide_price_mark)
+            .map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)
         }
       </div>
     </div>

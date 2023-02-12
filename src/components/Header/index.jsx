@@ -3,6 +3,7 @@ import s from './index.module.css';
 import logo from './data/logo.svg';
 import cart_icon from './data/cart_icon.svg';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Header() {
   return (
@@ -20,7 +21,7 @@ export default function Header() {
         <nav className={s.nav_menu}>
             <a href="#categories">Categories</a>
             <a href="#coupon">Coupon</a>
-            <a href="#special_offers">Special offers</a>
+            <HashLink to='#special_offers'>Special offers</HashLink>
             <a href="#contacts">Contacts</a>
             <Link to='cart'>
                 <img src={cart_icon} className={s.cart_icon} alt="Cart" />

@@ -1,22 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from './index.module.css';
 
-export default function CheckboxSortForm() {
+export default function CheckboxSortForm({ get_discont_category_products }) {
 
-  const set_mark = (event) => {
-    const discont_value = event.target.value
-    console.log(discont_value)
-  }
+  const [checked, setChecked] = useState(false);
 
+  // console.log(checked)
+
+  const handleChange = () => {
+    setChecked(!checked)
+    // console.log(checked)
+  };
 
   return (
     <div className={s.discont_sort}>
         {/* <label for='discont'>Discounted items</label>
         <input type='checkbox' id='discont' className={s.custom_checkbox} name="discont_list" value="yes"/> */}
 
-        <label className={s.custom_checkbox}>
-          <span>Discounted items</span>
-          <input type='checkbox' name="discont_list" value="on" onClick={set_mark}/>
+        <label className={s.container}>Discounted items
+          <span className={s.checkmark}></span>
+          <input type='checkbox' checked={checked} onChange={handleChange} onClick={get_discont_category_products} />
         </label>
         
     </div>
