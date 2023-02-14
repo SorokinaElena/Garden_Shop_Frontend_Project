@@ -13,8 +13,8 @@ export default function PriceSortForm() {
     const min_value = min_price.value || 0;
     const max_value = max_price.value || Infinity;
     dispatch(priceSortCategoryProducts({min_value, max_value}));
-    min_price.value = '';
-    max_price.value = '';
+    // min_price.value = '';
+    // max_price.value = '';
   }
 
 

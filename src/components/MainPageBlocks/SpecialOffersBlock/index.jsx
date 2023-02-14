@@ -8,33 +8,36 @@ export default function SpecialOffersBlock() {
 
   const dispatch = useDispatch();
 
-  const all_products = useSelector(state => state.all_products);
-
+  const all_products = useSelector(state => state.all_products); //35
+  
   useEffect(() => {
     dispatch(getAllProducts)
   }, []);
 
   const page_name = 'category_page';
 
-  const special_offer_arr = all_products.filter(el => el.discont_price < el.price)
-  const special_offer_value = special_offer_arr.length
+  const all_discont_products = all_products.filter(el => el.discont_price < el.price); //29
+  let discont_products_id_list = [];
+  all_discont_products.map(el => {
+    discont_products_id_list.push(el.id)
+  })
 
-  let random_offer_arr = [];
-  const random_offer_value = 3;
-
-  const get_random_offer = (random_offer_arr) => {
-    let temp_random_offer_id = 0;
-    while(random_offer_arr.length < random_offer_value && random_offer_value <= special_offer_value) {
-      temp_random_offer_id = Math.ceil(Math.random() * special_offer_value);
-      while(random_offer_arr.includes(temp_random_offer_id)) {
-        temp_random_offer_id = Math.ceil(Math.random() * special_offer_value)
+  let random_discont_products = [];
+  const random_discont_products_value = 3;
+  let random_discont_products_id_list = [];
+  
+  while (random_discont_products.length < random_discont_products_value) {
+    let random_discont_product_id = Math.floor(Math.random() * all_products.length);
+    let check_id = discont_products_id_list.includes(random_discont_product_id) // true if includes
+    if (check_id === true) {
+      let check_double_id = random_discont_products_id_list.includes(random_discont_product_id) // true if includes
+      if (check_double_id !== true) {
+        let random_discont_product = all_discont_products.find(el => el.id === random_discont_product_id); //{}
+        random_discont_products.push(random_discont_product);
+        random_discont_products_id_list.push(random_discont_product_id);
       }
-      random_offer_arr.push(temp_random_offer_id)
-    }
-    return random_offer_arr
+    }     
   }
-
-  get_random_offer(random_offer_arr)
 
     
   return (
@@ -43,11 +46,11 @@ export default function SpecialOffersBlock() {
       <h2>Sale</h2>
       <div >
         {
-          special_offer_arr.filter(el => random_offer_arr.includes(el.id))
-                           .map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)            
+          random_discont_products.map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)         
         }
       </div>
-      
     </section>
   )
 }
+
+

@@ -75,13 +75,25 @@ export default function PriceContainer({price, discont_price, count, page_name})
             ? 
             <div className={s.price_container} style={style_price_container}>
                 <p className={s.discont_price} style={style_discont_price}> {Math.round(discont_price)}$ </p>
-                <p className={s.price} style={style_price}> {Math.round(price)}$ </p>
-                <p className={s.discont} style={style_discont}>{Math.round((discont_price * 100 / price) - 100)}%</p>
+                {
+                    price !== discont_price
+                    ? <>
+                        <p className={s.price} style={style_price}> {Math.round(price)}$ </p>
+                        <p className={s.discont} style={style_discont}>{Math.round((discont_price * 100 / price) - 100)}%</p>
+                      </>
+                    : <> </>   
+                }
+                
             </div>
             :
             <div className={s.price_container} style={style_price_container}>
                 <p className={s.discont_price} style={style_discont_price}> { Math.round(discont_price) * count }$ </p>
-                <p className={s.price} style={style_price}> { Math.round(price) * count }$ </p>
+                {
+                   price !== discont_price
+                   ? <p className={s.price} style={style_price}> { Math.round(price) * count }$ </p>
+                   : <> </>
+                }
+                
             </div>
         }    
     </div>

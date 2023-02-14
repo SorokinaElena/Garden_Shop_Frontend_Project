@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './index.module.css';
-import sale_image from './data/sale_image.svg';
+import sale_image from './data/sale_image.png';
 import { Link } from 'react-router-dom';
 
 export default function SaleBlock() {

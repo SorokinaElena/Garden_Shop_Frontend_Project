@@ -31,10 +31,10 @@ export const categoryProductsReducer = (state = defaultState, action) => {
     } else if (action.type === GET_DISCONT_CATEGORY_PRODUCTS) {
         if (action.payload === false) {
             // console.log(action.payload)
-        return firstState
-    } else {
-        // return [...state].filter(el => el.price !== el.discont_price)
-        return [...state].filter(el => el.discont_price > 50)
+        return [...firstState]
+        } else {
+            // return [...state].filter(el => el.price !== el.discont_price)
+            return state.filter(el => el.discont_price !== el.price)
     }
     } else if (action.type === PRICE_SORT_CATEGORY_PRODUCTS) {
         const {min_value, max_value} = action.payload
