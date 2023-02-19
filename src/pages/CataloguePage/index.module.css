@@ -1,3 +1,14 @@
 .catalogue_page {
     padding: 0 33px;
 }
+
+.catalogue_page h2{
+    margin-bottom: 81px;
+}
+
+.catalogue_products_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 85px;
+    margin: 34px 0 56px 0;
+}

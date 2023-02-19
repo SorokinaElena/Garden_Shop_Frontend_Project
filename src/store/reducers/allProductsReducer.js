@@ -1,5 +1,5 @@
 const defaultState = [];
-// let firstState = [];
+let firstState = [];
 // let discontState = [];
 
 const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS';
@@ -14,7 +14,7 @@ export const loadAllProducts = (payload) => ({type: LOAD_ALL_PRODUCTS, payload})
 
 export const allProductsReducer = (state = defaultState, action) => {
     if (action.type === LOAD_ALL_PRODUCTS) {
-        // firstState = action.payload;
+        firstState = action.payload;
         return action.payload
     // } 
     // else if (action.type === PRICE_SORT_ALL_PRODUCTS) {

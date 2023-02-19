@@ -12,7 +12,7 @@ export default function MainPage() {
         <SaleBlock />
         <CategoriesBlock />
         <CouponBlock />
-        {/* <SpecialOffersBlock /> */}
+        <SpecialOffersBlock />
     </div>
   )
 }
