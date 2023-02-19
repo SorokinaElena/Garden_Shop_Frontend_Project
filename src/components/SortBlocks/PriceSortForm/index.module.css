@@ -22,6 +22,17 @@
     letter-spacing: 0.03em;
 }
 
+.price_sort input:hover {
+    box-shadow: 10px 10px 10px #888888;
+    cursor: pointer;
+}
+
+.price_sort input:focus {
+    box-shadow: 10px 10px 10px #888888;
+    cursor: text;
+    outline: none;
+}
+
 .price_sort input::placeholder {
     font-weight: 500;
     font-size: 16px;

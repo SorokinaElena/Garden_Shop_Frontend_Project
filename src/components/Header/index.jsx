@@ -6,23 +6,24 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 export default function Header() {
+
   return (
-    <header className={s.header}>
+    <header className={['content_wrapper', s.header].join(' ')}>
 
         <div className={s.header_item}>
             <Link to='/'>
                 <img src={logo} alt="Logo" />
             </Link>
-            <Link to='categories'>
+            <Link to='catalogue'>
                 <button>Catalogue</button>
             </Link>
         </div>
 
         <nav className={s.nav_menu}>
-            <a href="#categories">Categories</a>
-            <a href="#coupon">Coupon</a>
-            <HashLink to='#special_offers'>Special offers</HashLink>
-            <a href="#contacts">Contacts</a>
+            <Link to='categories'>Categories</Link>
+            <HashLink to='/#coupon'>Coupon</HashLink>
+            <Link to='sale'>Special offers</Link>
+            <HashLink to='/#contacts'>Contacts</HashLink>
             <Link to='cart'>
                 <img src={cart_icon} className={s.cart_icon} alt="Cart" />
             </Link>

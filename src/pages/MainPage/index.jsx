@@ -6,12 +6,13 @@ import SpecialOffersBlock from '../../components/MainPageBlocks/SpecialOffersBlo
 import s from './index.module.css';
 
 export default function MainPage() {
+
   return (
     <div>
         <SaleBlock />
         <CategoriesBlock />
         <CouponBlock />
-        <SpecialOffersBlock />
+        {/* <SpecialOffersBlock /> */}
     </div>
   )
 }

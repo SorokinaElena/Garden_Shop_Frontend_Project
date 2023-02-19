@@ -13,11 +13,12 @@
   cursor: pointer;
 
   position: relative;
+  
 
-  -webkit-user-select: none;
+  /* -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 
 /* Hide the browser's default checkbox */
@@ -33,6 +34,9 @@
 
 /* Create a custom checkbox */
 .checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 40px;
   background-color: #E5E5E5;
@@ -40,11 +44,20 @@
   border-radius: 7px;
   position: absolute;
   right: 0;
+
+  font-size: 22px;
 }
+
+.check_icon {
+  color: white;
+  font-size: 22px;
+}
+
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: rgba(51, 153, 51, 1);
+  box-shadow: 10px 10px 10px #888888;
+  /* background-color: rgba(51, 153, 51, 1); */
 }
 
 /* When the checkbox is checked, add a blue background */

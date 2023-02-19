@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import s from './index.module.css';
+import { CheckOutlined } from '@ant-design/icons';
 
-export default function CheckboxSortForm({ get_discont_category_products }) {
+export default function CheckboxSortForm({ get_discont_products }) {
 
   const [checked, setChecked] = useState(false);
 
@@ -18,8 +19,13 @@ export default function CheckboxSortForm({ get_discont_category_products }) {
         <input type='checkbox' id='discont' className={s.custom_checkbox} name="discont_list" value="yes"/> */}
 
         <label className={s.container}>Discounted items
-          <span className={s.checkmark}></span>
-          <input type='checkbox' checked={checked} onChange={handleChange} onClick={get_discont_category_products} />
+          {
+            checked 
+            ? <span className={s.checkmark}><CheckOutlined /></span>
+            : <span className={s.checkmark}></span>
+          }
+          
+          <input type='checkbox' checked={checked} onChange={handleChange} onClick={get_discont_products} />
         </label>
         
     </div>

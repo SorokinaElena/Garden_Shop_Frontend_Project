@@ -4,7 +4,7 @@ import { UpOutlined } from '@ant-design/icons';
 import { DownOutlined } from '@ant-design/icons';
 
 
-export default function SelectSortForm({ select_category_products }) {
+export default function SelectSortForm({ select_products }) {
 
   const [menuActive, setMenuActive] = useState(false);
   const [selectCurrentText, setSelectCurrentText] = useState('by default');
@@ -19,7 +19,7 @@ export default function SelectSortForm({ select_category_products }) {
   return (       
     <div className={s.select_sort}>
         <span>Sorted:</span>
-        <div className={[s.select, menuActive ? s.is_active : ''].join(' ')} onClick={select_category_products}>
+        <div className={[s.select, menuActive ? s.is_active : ''].join(' ')} onClick={select_products}>
             <div className={s.select_header} onClick={() => setMenuActive(menuActive ? false : true)}>
                 <span className={s.select_current}>{selectCurrentText}</span>
                 <div className={s.select_icons}>
@@ -34,7 +34,7 @@ export default function SelectSortForm({ select_category_products }) {
                 <option className={s.select_item} value='by price from min' id='discont_price' onClick={choose_option}>by price from min</option>
                 <option className={s.select_item} value='by price from max' id='discont_price' onClick={choose_option}>by price from max</option>
             </div>
-        </div> 
+        </div>
     </div>
   )
 }

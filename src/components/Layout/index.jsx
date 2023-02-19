@@ -5,9 +5,10 @@ import Header from '../Header';
 import Footer from '../Footer';
 
 export default function Layout() {
+
   return (
     <div className={s.layout}>
-        <Header/>
+        <Header />
         <main>
             <Outlet />
         </main>

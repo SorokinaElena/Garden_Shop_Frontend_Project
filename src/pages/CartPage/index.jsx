@@ -11,11 +11,18 @@ export default function CartPage() {
   console.log(cart)
     
   const page_name = 'cart_page';
+
+  let total_count = 0;
+  cart.map(el => total_count = total_count + el.count);
+
   
   return (
     <div className={['content_wrapper', s.cart_page].join(' ')}>
 
-      <h2>Shopping cart</h2>
+      <h2>Shopping cart</h2>     
+
+      <p>{total_count}</p>
+
       {
         cart.length === 0 
         ? <div className={[s.back_to_store_link, s.empty_card].join(' ')}>
