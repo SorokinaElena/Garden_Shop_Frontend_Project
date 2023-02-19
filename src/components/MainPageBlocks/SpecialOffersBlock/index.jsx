@@ -8,12 +8,12 @@ export default function SpecialOffersBlock() {
 
   const dispatch = useDispatch();
 
-  const all_products = useSelector(state => state.all_products); //35
-  console.log(all_products)
-
   useEffect(() => {
     dispatch(getAllProducts)
   }, []);
+
+  const all_products = useSelector(state => state.all_products); //35
+  console.log(all_products)
 
   const page_name = 'category_page';
 
@@ -30,19 +30,23 @@ export default function SpecialOffersBlock() {
   let random_discont_products = [];
   const random_discont_products_value = 3;
   let random_discont_products_id_list = [];
-  
-  // while (random_discont_products.length < random_discont_products_value) {
-  //   let random_discont_product_id = Math.floor(Math.random() * all_products.length);
-  //   let check_id = discont_products_id_list.includes(random_discont_product_id) // true if includes
-  //   if (check_id === true) {
-  //     let check_double_id = random_discont_products_id_list.includes(random_discont_product_id) // true if includes
-  //     if (check_double_id !== true) {
-  //       let random_discont_product = all_discont_products.find(el => el.id === random_discont_product_id); //{}
-  //       random_discont_products.push(random_discont_product);
-  //       random_discont_products_id_list.push(random_discont_product_id);
-  //     }
-  //   }     
-  // }
+
+  let flag_break = 0;
+
+  while ( flag_break < random_discont_products_value && all_discont_products.length > 3) {
+    let random_discont_product_id = Math.floor(Math.random() * all_products.length);
+    let check_id = discont_products_id_list.includes(random_discont_product_id) // true if includes
+    if (check_id === true) {
+      let check_double_id = random_discont_products_id_list.includes(random_discont_product_id) // true if includes
+      if (check_double_id !== true) {
+        let random_discont_product = all_discont_products.find(el => el.id === random_discont_product_id); //{}
+        random_discont_products.push(random_discont_product);
+        random_discont_products_id_list.push(random_discont_product_id);
+        flag_break ++;
+        console.log(flag_break)
+      }
+    }     
+  }
 
     
   return (

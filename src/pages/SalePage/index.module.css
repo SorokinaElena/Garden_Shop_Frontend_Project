@@ -12,3 +12,11 @@
     gap: 85px;
     margin: 34px 0 56px 0;
 }
+
+.sort_form {
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    align-items: center;
+}

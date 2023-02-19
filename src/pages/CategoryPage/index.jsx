@@ -10,6 +10,7 @@ import CheckboxSortForm from '../../components/SortBlocks/CheckboxSortForm';
 import SelectSortForm from '../../components/SortBlocks/SelectSortForm';
 import { selectCategoryProducts } from '../../store/reducers/categoryProductsReducer';
 import { getDiscontCategoryProducts } from '../../store/reducers/categoryProductsReducer';
+import { priceSortCategoryProducts } from '../../store/reducers/categoryProductsReducer';
 
 
 export default function CategoryPage() {
@@ -33,6 +34,19 @@ export default function CategoryPage() {
 
   const page_name = 'category_page';
 
+  // const price_sort_category_products = dispatch(priceSortCategoryProducts({min_value, max_value}));
+  // 
+
+  const price_sort_category_products = (event) => {
+    event.preventDefault();
+    const { min_price, max_price } = event.target;
+    const min_value = min_price.value || 0;
+    const max_value = max_price.value || Infinity;
+    dispatch(priceSortCategoryProducts({min_value, max_value}));
+    // min_price.value = '';
+    // max_price.value = '';
+  }
+
   const select_category_products = (event) => 
   dispatch(selectCategoryProducts({
     id: event.target.id,
@@ -50,7 +64,7 @@ export default function CategoryPage() {
         }
       </h2>
       <div className={s.sort_form}>
-        <PriceSortForm />
+        <PriceSortForm price_sort_products={price_sort_category_products} />
         <CheckboxSortForm get_discont_products={get_discont_category_products} />
         <SelectSortForm select_products={select_category_products} />
       </div>
