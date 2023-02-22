@@ -8,6 +8,7 @@ export const getCategoryProducts = (category) => {
             const payload = json.map(el => ({
                 ...el,
                 hide_price_mark: false,
+                hide_discont_mark: false,
             }))
             dispatch(loadCategoryProducts(payload))
         })

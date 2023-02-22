@@ -1,0 +1,32 @@
+.order_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.order_form input {
+    width: 100%;
+    background: #FFFFFF;
+    
+    font-size: 18px; 
+    letter-spacing: 0.03em;
+}
+
+.order_form input::placeholder {
+    font-weight: 600; /*500*/
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    color: #6C6C6C; /*#929292*/
+}
+
+.order_form input:focus {
+    outline: none;
+}
+
+
+.order_form button {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding: 20px 0;
+    cursor: pointer;
+}

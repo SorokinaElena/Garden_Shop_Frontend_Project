@@ -3,6 +3,7 @@ import PriceContainer from '../PriceContainer';
 import s from './index.module.css';
 import { addToCart } from '../../store/reducers/cartReducer';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 export default function ProductDescrCard({id, image, price, discont_price, title, description, page_name}) {
 
@@ -17,11 +18,17 @@ export default function ProductDescrCard({id, image, price, discont_price, title
 
         <div className={s.product_descr_card}>
 
-            <img src={`http://localhost:3333/${image}`} alt={title} />
+        {/* <a target="_blank" href='https://www.instagram.com/'>Instagram</a> */}
+            <a target="_blank" href={`http://localhost:3333/${image}`}>
+              <img src={`http://localhost:3333/${image}`} alt={title} />
+            </a>
+            
 
             <div className={s.descr_container}>
                 <PriceContainer price={price} discont_price={discont_price} page_name={page_name}/>
-                <button onClick={add_to_cart}>to Cart</button>
+                <Link to='/cart'>
+                  <button onClick={add_to_cart}>to Cart</button>
+                </Link>
                 <h4>Description</h4>
                 <p className={s.descr}>{description}</p>
             </div>

@@ -50,3 +50,31 @@
     right: 32px;
     top: 35px;
 }
+
+.cart_container {
+    min-width: 22px;
+    min-height: 22px;
+}
+
+.count {
+    display: none;
+} 
+
+.count_true {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 22px;
+    min-height: 22px;
+    
+    font-size: 0.8em;
+    border: 1px solid #339933;
+    border-radius: 50%;
+    background-color: #339933;
+    color: white;
+    z-index: -1;
+
+    position: absolute;
+    right: 35px;
+    top: 42px;
+} 

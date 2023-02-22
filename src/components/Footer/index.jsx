@@ -9,13 +9,13 @@ export default function Footer() {
 
       <div className={s.contacts}>
         <h2>Contacts</h2>
-        <h3>+7 999 999 99 99</h3>
+        <h3>+49 1796205224</h3>
         <div className={s.messengers}>
           <div className={s.messenger_item}>
-            <a target="_blank" href='https://www.instagram.com/lenoksmagpie'>
+            <a target="_blank" href='https://www.instagram.com/'>
               <InstagramOutlined className={s.messenger_icon}/>
             </a>
-            <a target="_blank" href='https://www.instagram.com/lenoksmagpie'>Instagram</a>
+            <a target="_blank" href='https://www.instagram.com/'>Instagram</a>
           </div>
           <div className={s.messenger_item}>
             <a target="_blank" href='https://wa.me/491796205224'>
@@ -29,8 +29,8 @@ export default function Footer() {
         <div className={s.address}>
             <h2>Address</h2>
             <h3>Willy-Brandt-Ring, 40 <br /> Erlensee, Germany</h3>
-            <h4>Opening hours</h4>
-            <p>Round-the-clock</p>
+            <h4>Working Hours:</h4>
+            <p>24 hours a day</p>
         </div>
 
     </footer>

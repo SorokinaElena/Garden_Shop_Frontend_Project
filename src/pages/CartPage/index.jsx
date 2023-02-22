@@ -4,16 +4,22 @@ import s from './index.module.css';
 import { RightOutlined } from '@ant-design/icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import OrderForm from '../../components/OrderForm';
 
 export default function CartPage() {
 
   const cart = useSelector(state => state.cart);
-  console.log(cart)
     
   const page_name = 'cart_page';
 
-  let total_count = 0;
-  cart.map(el => total_count = total_count + el.count);
+  // let total_count = 0;
+  // cart.map(el => total_count = total_count + el.count);
+
+  let total_price = 0;
+  cart.map(el => total_price = total_price + el.discont_price * el.count);
+  total_price = total_price.toFixed(2);
+
+  const placeholder = 'Phone number';
 
   
   return (
@@ -21,7 +27,7 @@ export default function CartPage() {
 
       <h2>Shopping cart</h2>     
 
-      <p>{total_count}</p>
+      {/* <p>{total_count}</p> */}
 
       {
         cart.length === 0 
@@ -45,7 +51,16 @@ export default function CartPage() {
               </div>
             </div>
 
-            <div className={s.order_container}>Order details</div>
+            <div className={s.order_container}>
+              <div className={s.form_container}>
+                <p>Order details</p>
+                <div className={s.order_sum}>
+                  <span>Total</span>
+                  <span>{total_price}$</span>
+                </div>
+                <OrderForm children={'Order'} placeholder={placeholder} page_name={page_name} />
+              </div>
+            </div>
           </div>
       }
       

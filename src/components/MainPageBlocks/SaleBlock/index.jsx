@@ -9,13 +9,13 @@ export default function SaleBlock() {
       <div className={['content_wrapper', s.content].join(' ')}>
         <div className={s.info}>
           <h1>Sale</h1>
-          <h3>New season sale</h3>
+          <h3>New season</h3>
           <div className={s.btn_container}>
             <Link to='sale'>
-              <button>All offers</button>
+              <button>Sale</button>
             </Link>
             <Link to='sale'>
-              <button>See more</button>
+              <button>Learn more</button>
             </Link>
           </div>
         </div>

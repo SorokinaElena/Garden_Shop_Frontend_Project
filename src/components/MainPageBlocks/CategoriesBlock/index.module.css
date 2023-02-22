@@ -7,7 +7,7 @@
 .categories_block_header {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 102px;
 }
 
 .categories_block button {

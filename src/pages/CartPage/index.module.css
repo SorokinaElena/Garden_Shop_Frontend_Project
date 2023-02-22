@@ -44,5 +44,41 @@
     padding: 59px 0 0 60px;
 }
 
+.form_container {
+    width: 496px;
+    border: 2px solid #000000;
+    border-radius: 21px;
+    padding: 25px;
+}
+
+.form_container p {
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 0.03em;
+    padding-bottom: 47px;
+}
+
+.order_sum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.order_sum span:first-child {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+}
+
+.order_sum span:nth-child(2) {
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    margin-right: 48px;
+}
+
+
+
 
 

@@ -1,6 +1,5 @@
 const defaultState = [];
 let firstState = [];
-let discontState = [];
 
 const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS';
 const PRICE_SORT_ALL_PRODUCTS = 'PRICE_SORT_ALL_PRODUCTS';
@@ -27,13 +26,27 @@ export const allProductsReducer = (state = defaultState, action) => {
             }
             return el;
         })        
-    } else if (action.type === GET_DISCONT_ALL_PRODUCTS) {
-        if (action.payload === false) {
-            return [...discontState]
-            } else {
-                discontState = state;
-                return state.filter(el => el.discont_price !== el.price)
+    } 
+    
+    else if (action.type === GET_DISCONT_ALL_PRODUCTS) {
+        if (action.payload === true) {
+            return state.map(el => {
+                if (el.discont_price === el.price) {
+                    el.hide_discont_mark = true
+                }
+                return el
+            })        
+        } else {
+            return state.map(el => {
+                if (el.discont_price === el.price) {
+                    el.hide_discont_mark = false
+                }
+                return el
+            })
+            
         }
+
+
     } else if (action.type === SELECT_ALL_PRODUCTS) {
             if (action.payload.id === 'default') {
                 return firstState

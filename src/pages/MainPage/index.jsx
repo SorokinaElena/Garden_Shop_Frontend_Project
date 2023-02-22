@@ -7,11 +7,13 @@ import s from './index.module.css';
 
 export default function MainPage() {
 
+  const page_name = 'main_page';
+
   return (
     <div>
         <SaleBlock />
         <CategoriesBlock />
-        <CouponBlock />
+        <CouponBlock page_name={page_name} />
         <SpecialOffersBlock />
     </div>
   )

@@ -16,7 +16,6 @@ export default function CataloguePage() {
   const dispatch = useDispatch();
 
   const all_products = useSelector(state => state.all_products);
-  console.log(all_products)
 
   useEffect(() => {
     dispatch(getAllProducts)
@@ -34,7 +33,10 @@ export default function CataloguePage() {
     // max_price.value = '';
   }
 
-  const get_discont_all_products = (event) => dispatch(getDiscontAllProducts(event.target.checked));
+  const get_discont_all_products = (event) => {
+    dispatch(getDiscontAllProducts(event.target.checked));
+    select_all_products();
+  }
 
   const select_all_products = (event) => 
   dispatch(selectAllProducts({
@@ -52,8 +54,8 @@ export default function CataloguePage() {
       </div>
       <div className={s.catalogue_products_container}>
         {
-          all_products.filter(el => !el.hide_price_mark)
-                      .map(el => <ProductCard key={el.id} {...el} page_name={page_name} />)
+          all_products.filter(el => !el.hide_price_mark && !el.hide_discont_mark)
+                          .map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)
         }
       </div>
     </div>

@@ -13,19 +13,15 @@ export default function SpecialOffersBlock() {
   }, []);
 
   const all_products = useSelector(state => state.all_products); //35
-  console.log(all_products)
 
   const page_name = 'category_page';
 
   const all_discont_products = all_products.filter(el => el.discont_price < el.price); //29
-  console.log(all_discont_products)
 
   let discont_products_id_list = [];
   all_discont_products.map(el => {
     discont_products_id_list.push(el.id)
   })
-
-  console.log(discont_products_id_list)
 
   let random_discont_products = [];
   const random_discont_products_value = 3;
@@ -43,7 +39,6 @@ export default function SpecialOffersBlock() {
         random_discont_products.push(random_discont_product);
         random_discont_products_id_list.push(random_discont_product_id);
         flag_break ++;
-        console.log(flag_break)
       }
     }     
   }

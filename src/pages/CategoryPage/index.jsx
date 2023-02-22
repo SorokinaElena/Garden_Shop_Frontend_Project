@@ -19,18 +19,23 @@ export default function CategoryPage() {
 
   const {category} = useParams();
 
-  const categoryProducts = useSelector(state => state.categoryProducts);
-  const categories = useSelector(state => state.categories);
-
   useEffect(() => {
     dispatch(getCategories)
   }, []);
 
-  const target_category = categories.filter(el => el.id == category);
-  
   useEffect(() => {
     dispatch(getCategoryProducts(category))
   }, []);
+
+  const categoryProducts = useSelector(state => state.categoryProducts);
+  const categories = useSelector(state => state.categories);
+  console.log(categoryProducts);
+
+  
+
+  const target_category = categories.filter(el => el.id == category);
+  
+  
 
   const page_name = 'category_page';
 
@@ -47,13 +52,18 @@ export default function CategoryPage() {
     // max_price.value = '';
   }
 
+  const get_discont_category_products = (event) => {
+    dispatch(getDiscontCategoryProducts(event.target.checked));
+    select_category_products();
+  } 
+
   const select_category_products = (event) => 
   dispatch(selectCategoryProducts({
     id: event.target.id,
     value: event.target.value,
   }));
 
-  const get_discont_category_products = (event) => dispatch(getDiscontCategoryProducts(event.target.checked));
+  
 
 
   return (
@@ -72,7 +82,7 @@ export default function CategoryPage() {
       <div className={s.category_products_container}>
         {
           categoryProducts
-            .filter(el => !el.hide_price_mark)
+            .filter(el => !el.hide_price_mark && !el.hide_discont_mark)
             .map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)
         }
       </div>

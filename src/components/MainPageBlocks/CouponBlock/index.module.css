@@ -2,3 +2,34 @@
     height: 476px;
     background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
 }
+
+.coupon_block > div {
+    display: flex;
+}
+
+.coupon_block img {
+    padding: 27px 0 27px 91px;
+    margin-right: 199px;
+}
+
+.form_container {
+    width: 473px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_container p {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.form_container p:first-child {
+    font-size: 90px;
+    margin-top: 44px;
+}
+
+.form_container p:nth-child(2) {
+    font-size: 50px;
+    margin-bottom: 46px;
+}

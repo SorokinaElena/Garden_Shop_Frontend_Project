@@ -4,8 +4,15 @@ import logo from './data/logo.svg';
 import cart_icon from './data/cart_icon.svg';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
+
+  const cart = useSelector(state => state.cart)
+
+  let total_count = 0;
+  cart.map(el => total_count = total_count + el.count);
+
 
   return (
     <header className={['content_wrapper', s.header].join(' ')}>
@@ -24,8 +31,9 @@ export default function Header() {
             <HashLink to='/#coupon'>Coupon</HashLink>
             <Link to='sale'>Special offers</Link>
             <HashLink to='/#contacts'>Contacts</HashLink>
-            <Link to='cart'>
-                <img src={cart_icon} className={s.cart_icon} alt="Cart" />
+            <Link to='cart' className={s.cart_container}>
+                    <img src={cart_icon} className={s.cart_icon} alt="Cart" />
+                    <div className={cart.length > 0 ? s.count_true : s.count}>{total_count}</div>
             </Link>
         </nav>
 

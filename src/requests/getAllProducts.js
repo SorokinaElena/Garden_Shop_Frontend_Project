@@ -13,6 +13,7 @@ export const getAllProducts = (dispatch) => {
               const payload = json.map(el => ({
                         ...el,
                         hide_price_mark: false,
+                        hide_discont_mark: false,
                 }))
               dispatch(loadAllProducts(payload))
         })
