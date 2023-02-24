@@ -19,15 +19,11 @@ export default function CartPage() {
   cart.map(el => total_price = total_price + el.discont_price * el.count);
   total_price = total_price.toFixed(2);
 
-  const placeholder = 'Phone number';
-
   
   return (
     <div className={['content_wrapper', s.cart_page].join(' ')}>
 
       <h2>Shopping cart</h2>     
-
-      {/* <p>{total_count}</p> */}
 
       {
         cart.length === 0 
@@ -58,7 +54,7 @@ export default function CartPage() {
                   <span>Total</span>
                   <span>{total_price}$</span>
                 </div>
-                <OrderForm children={'Order'} placeholder={placeholder} page_name={page_name} />
+                <OrderForm children={'Order'} page_name={page_name} cart={cart}/>
               </div>
             </div>
           </div>
