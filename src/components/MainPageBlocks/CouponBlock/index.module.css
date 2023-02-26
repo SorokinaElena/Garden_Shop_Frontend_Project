@@ -8,6 +8,7 @@
 }
 
 .coupon_block img {
+    display: block;
     padding: 27px 0 27px 91px;
     margin-right: 199px;
 }
@@ -32,4 +33,31 @@
 .form_container p:nth-child(2) {
     font-size: 50px;
     margin-bottom: 46px;
+}
+
+@media (max-width: 375px) {
+
+    .coupon_block {
+        padding-bottom: 15px;
+    }
+
+    .coupon_block img {
+        display: none;
+    }
+
+    .coupon_block {
+        height: max-content;
+    }    
+
+    .form_container p:first-child {
+        margin-top: 20px;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .form_container p:nth-child(2) {
+        font-size: 25px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 }

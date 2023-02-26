@@ -31,11 +31,13 @@ export default function Header() {
             <HashLink to='/#coupon'>Coupon</HashLink>
             <Link to='sale'>Special offers</Link>
             <HashLink to='/#contacts'>Contacts</HashLink>
-            <Link to='cart' className={s.cart_container}>
+            
+        </nav>
+
+        <Link to='cart' className={s.cart_container}>
                     <img src={cart_icon} className={s.cart_icon} alt="Cart" />
                     <div className={cart.length > 0 ? s.count_true : s.count}>{total_count}</div>
-            </Link>
-        </nav>
+        </Link>
 
     </header>
   )

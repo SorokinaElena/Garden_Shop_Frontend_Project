@@ -48,9 +48,15 @@ export default function SpecialOffersBlock() {
     <section className={['content_wrapper', s.special_offers_block].join(' ')} id='special_offers'>
       <a name='special_offers'></a>
       <h2>Sale</h2>
-      <div >
+      <div className={s.random_discont_products_desktop}>
         {
           random_discont_products.map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)         
+        }
+      </div>
+      <div className={s.random_discont_products_mobile}>
+        {
+          random_discont_products.slice(0, 2)
+                                 .map(el => <ProductCard key={el.id} {...el} page_name={page_name}/>)
         }
       </div>
     </section>

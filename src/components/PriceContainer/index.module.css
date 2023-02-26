@@ -1,13 +1,7 @@
 .price_container {
     width: 100%;
     display: flex;
-    justify-content:space-between;
-}
-
-.price_container span {
-    display: flex;
-    gap: 50px;
-    align-items: end;
+    justify-content: space-between;
 }
 
 .price {
@@ -27,3 +21,9 @@
     letter-spacing: 0.03em;
     color: #FF32A1;
 }
+
+@media (max-width: 375px) {
+
+  
+
+} 

@@ -3,13 +3,36 @@ import s from './index.module.css';
 
 export default function PriceContainer({price, discont_price, count, page_name}) {
 
+ 
     let style_price_container = {};
-         
+
+    if (window.matchMedia('screen and (max-width: 375px)').matches) {
+        if (page_name === 'category_page') {
+            style_price_container = {
+                alignItems: 'center',
+                padding: '20px 0px 10px 0px',
+            }
+        } else if (page_name === 'product_page') {
+            style_price_container = {
+                alignItems: 'flex-end',
+                padding: '0',
+                margin: '68px 11px 40px 0px',
+            }
+        } else if (page_name === 'cart_page') {
+            style_price_container = {
+                justifyContent: 'flex-start',
+                alignItems: 'center',
+                padding: '0 0 0 24px',
+                margin: '0',
+                gap: '70px',
+            }
+        }
+      } else {
+
     if (page_name === 'category_page') {
         style_price_container = {
             alignItems: 'center',
             padding: '20px 34px 10px 24px',
-            margin: '0',
         }
     } else if (page_name === 'product_page') {
         style_price_container = {
@@ -26,6 +49,19 @@ export default function PriceContainer({price, discont_price, count, page_name})
             gap: '70px',
         }
     }
+
+}
+
+    // let style_price_container = '';
+         
+    //         if (page_name === 'category_page') {
+    //             style_price_container = 'price_product_card';
+    //         } else if (page_name === 'product_page') {
+    //             style_price_container = 'price_product_descr_card';
+    //             } else if (page_name === 'cart_page') {
+    //             style_price_container = 'price_cart';
+    //                 }
+
 
     let style_price = {};
 
@@ -92,8 +128,7 @@ export default function PriceContainer({price, discont_price, count, page_name})
                    price !== discont_price
                    ? <p className={s.price} style={style_price}> { Math.round(price) * count }$ </p>
                    : <> </>
-                }
-                
+                } 
             </div>
         }    
     </div>

@@ -1,6 +1,5 @@
 .categories_block {
     height: 617px;
-    /* padding: 40px 33px 112px 33px; */
     padding: 40px 0px 112px 50px;
 }
 
@@ -24,4 +23,18 @@
 .categories_block button:hover {
     transform: scale(1.05);
     transition: all .4s ease; 
+}
+
+@media (max-width: 375px) {
+
+    .categories_block {
+        height: max-content;
+        padding: 40px 10px 25px 10px;
+    }
+
+    .categories_block_header {
+        justify-content: space-between;
+        gap: 0px;
+    }
+
 }

@@ -64,3 +64,34 @@
     font-weight: 600;
 }
 
+@media (max-width: 375px) {
+
+    .footer {
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .contacts,
+    .address {
+        min-width: 375px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .contacts h3 {
+        font-size: 40px;
+    }
+
+    .address h3 {
+        font-size: 30px;
+    }
+
+    .messengers {
+        justify-content: center;
+    }
+
+}
+

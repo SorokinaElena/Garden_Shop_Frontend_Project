@@ -24,3 +24,12 @@ h2 {
     font-size: 40px;
     letter-spacing: 0.03em;
 }
+
+@media (max-width: 375px) {
+
+    .content_wrapper {
+        max-width: 375px;
+        min-width: 375px;
+    }
+
+}

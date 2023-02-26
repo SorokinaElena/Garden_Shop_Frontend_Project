@@ -9,8 +9,6 @@
    align-items: flex-start;
    cursor: pointer;
    text-decoration: none;
-
-   /* position: relative; */
 }
 
 .product_card_container img {
@@ -61,5 +59,38 @@
     background-color: #339933;
     color: white;
     cursor: pointer;
+}
+
+
+@media (max-width: 375px) {
+
+    .product_card_container {
+        width: 163px;
+    }
+
+    .product_card_container img {
+        width: 163px;
+        height: 163px;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .price_container {
+        width: 100%;
+        display: flex;
+        padding: 0 0 10px 0;
+        /* margin: 0; */
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 16px;
+        padding-left: 0;
+    }
+    
+
 }
 

@@ -25,7 +25,7 @@ export default function ProductDescrCard({id, image, price, discont_price, title
             
 
             <div className={s.descr_container}>
-                <PriceContainer price={price} discont_price={discont_price} page_name={page_name}/>
+                  <PriceContainer price={price} discont_price={discont_price} page_name={page_name}/>
                 <Link to='/cart'>
                   <button onClick={add_to_cart}>to Cart</button>
                 </Link>

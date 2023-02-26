@@ -12,7 +12,7 @@ export default function SaleBlock() {
           <h3>New season</h3>
           <div className={s.btn_container}>
             <Link to='sale'>
-              <button>Sale</button>
+              <button className={s.mobile_none}>Sale</button>
             </Link>
             <Link to='sale'>
               <button>Learn more</button>

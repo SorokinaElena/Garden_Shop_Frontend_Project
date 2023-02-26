@@ -3,6 +3,8 @@
     height: 658px;
     display: flex;
     flex-direction: column;
+
+    position: relative;
 }
 
 .special_offers_block > div {
@@ -12,4 +14,46 @@
 
 .special_offers_block h2 {
     margin: 50px 0 20px 0;
+}
+
+.random_discont_products_desktop {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+
+.random_discont_products_mobile {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+@media (max-width: 375px) {
+
+    .random_discont_products_desktop {
+        display: none;
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    .random_discont_products_mobile {
+        display: block;
+        opacity: 1;
+        top: 110px;
+        z-index: 1;
+    }
+
+    .special_offers_block {
+        height: auto;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }    
+
+    .special_offers_block > div {
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
 }

@@ -87,5 +87,22 @@
     color: red;
 }
 
+@media (max-width: 375px) {
+
+    .order_form {
+        padding: 15px;
+    }
+
+    .input_main_page {
+        padding: 27px 0 26px 25px;
+    }
+
+    .error_container_main_page{
+        top: 65px;
+        left: 35px;
+    }
+
+}
+
 
 

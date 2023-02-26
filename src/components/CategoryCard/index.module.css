@@ -23,3 +23,14 @@
     transition: all .4s ease; 
 }
 
+@media (max-width: 375px) {
+
+    .category_card img {
+        width: 163px;
+        height: 180px;
+        margin-bottom: 10px;
+        object-fit: cover;
+    }    
+
+}
+
