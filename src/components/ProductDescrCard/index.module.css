@@ -55,3 +55,21 @@
     line-height: 26px;
     text-align: justify;
 }
+
+@media (max-width: 375px) {
+
+    .product_descr_card {
+        flex-direction: column;
+    }
+
+    .product_descr_card img {
+        width: 355px;
+        height: 355px;
+        margin: 0;
+        object-fit: contain;
+        cursor: zoom-in;
+    }
+
+  
+
+}

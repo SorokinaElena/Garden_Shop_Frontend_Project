@@ -1,3 +1,11 @@
 .product_page {
     padding: 0 33px 33px 33px;
 }
+
+@media (max-width: 375px) {
+
+    .product_page {
+        padding: 0 10px;
+    }
+
+}

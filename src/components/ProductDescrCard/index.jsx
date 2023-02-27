@@ -18,12 +18,10 @@ export default function ProductDescrCard({id, image, price, discont_price, title
 
         <div className={s.product_descr_card}>
 
-        {/* <a target="_blank" href='https://www.instagram.com/'>Instagram</a> */}
             <a target="_blank" href={`http://localhost:3333/${image}`}>
               <img src={`http://localhost:3333/${image}`} alt={title} />
             </a>
             
-
             <div className={s.descr_container}>
                   <PriceContainer price={price} discont_price={discont_price} page_name={page_name}/>
                 <Link to='/cart'>

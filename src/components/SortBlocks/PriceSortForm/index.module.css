@@ -1,6 +1,7 @@
 .price_sort {
     display: flex;
     gap: 15px;
+    justify-content: space-between;
     align-items: center;
     margin-right: 40px;
 }
@@ -8,6 +9,8 @@
 .price_sort form {
     display: flex;
     gap: 15px;
+
+    position: relative;
 }
 
 .price_sort input {
@@ -38,4 +41,22 @@
     font-size: 16px;
     color:  #ACACAC;
     letter-spacing: 0.03em;
+}
+
+.price_sort input:nth-child(3) {
+    width: 0;
+
+    position: absolute;
+}
+
+@media (max-width: 375px) {
+
+    .price_sort {
+        width: 100vw;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-right: 0;
+        padding: 0 10px 0 10px;
+    }
+
 }

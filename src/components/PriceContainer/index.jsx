@@ -7,6 +7,7 @@ export default function PriceContainer({price, discont_price, count, page_name})
     let style_price_container = {};
 
     if (window.matchMedia('screen and (max-width: 375px)').matches) {
+        
         if (page_name === 'category_page') {
             style_price_container = {
                 alignItems: 'center',
@@ -29,27 +30,26 @@ export default function PriceContainer({price, discont_price, count, page_name})
         }
       } else {
 
-    if (page_name === 'category_page') {
-        style_price_container = {
-            alignItems: 'center',
-            padding: '20px 34px 10px 24px',
+        if (page_name === 'category_page') {
+            style_price_container = {
+                alignItems: 'center',
+                padding: '20px 34px 10px 24px',
+            }
+        } else if (page_name === 'product_page') {
+            style_price_container = {
+                alignItems: 'flex-end',
+                padding: '0',
+                margin: '68px 11px 40px 0px',
+            }
+        } else if (page_name === 'cart_page') {
+            style_price_container = {
+                justifyContent: 'flex-start',
+                alignItems: 'center',
+                padding: '0 0 0 24px',
+                margin: '0',
+                gap: '70px',
+            }
         }
-    } else if (page_name === 'product_page') {
-        style_price_container = {
-            alignItems: 'flex-end',
-            padding: '0',
-            margin: '68px 11px 40px 0px',
-        }
-    } else if (page_name === 'cart_page') {
-        style_price_container = {
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-            padding: '0 0 0 24px',
-            margin: '0',
-            gap: '70px',
-        }
-    }
-
 }
 
     // let style_price_container = '';

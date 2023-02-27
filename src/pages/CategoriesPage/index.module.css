@@ -16,6 +16,15 @@
 
 @media (max-width: 375px) {
 
-    
+    .categories_page {
+        padding: 0 10px;
+    }
+
+    .categories_container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        row-gap: 25px;
+        margin-bottom: 40px;
+    }
 
 }
