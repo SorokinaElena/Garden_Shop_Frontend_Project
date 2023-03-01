@@ -66,10 +66,17 @@
         width: 355px;
         height: 355px;
         margin: 0;
-        object-fit: contain;
-        cursor: zoom-in;
     }
 
-  
+    .descr_container {
+        padding-left: 0px;
+    }
 
+    .product_descr_card {
+        padding-right: 0;
+    }
+
+    .descr_container button {
+        width: 100%;
+    }        
 }

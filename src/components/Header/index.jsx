@@ -22,7 +22,7 @@ export default function Header() {
                 <img src={logo} alt="Logo" />
             </Link>
             <Link to='catalogue'>
-                <button>Catalogue</button>
+                <button>Catalog</button>
             </Link>
         </div>
 

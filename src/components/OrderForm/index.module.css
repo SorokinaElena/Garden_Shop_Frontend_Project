@@ -90,7 +90,7 @@
 @media (max-width: 375px) {
 
     .order_form {
-        padding: 15px;
+        padding: 0px;
     }
 
     .input_main_page {
@@ -101,6 +101,11 @@
         top: 65px;
         left: 35px;
     }
+
+    .input_cart_page {
+        padding: 20px;
+    }
+    
 
 }
 

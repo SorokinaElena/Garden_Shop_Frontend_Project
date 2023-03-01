@@ -17,7 +17,7 @@ export default function PriceContainer({price, discont_price, count, page_name})
             style_price_container = {
                 alignItems: 'flex-end',
                 padding: '0',
-                margin: '68px 11px 40px 0px',
+                margin: '34px 0 34px 0',
             }
         } else if (page_name === 'cart_page') {
             style_price_container = {

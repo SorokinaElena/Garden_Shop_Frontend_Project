@@ -22,11 +22,5 @@ export default function SaleBlock() {
         <img src={sale_image} alt="Picture" />
       </div>
     </section>
-
-   
-
-
-
-
   )
 }

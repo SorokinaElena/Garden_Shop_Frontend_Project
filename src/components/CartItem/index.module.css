@@ -58,3 +58,34 @@
     border-radius: 12px;
     font-weight: 600;
 }
+
+@media (max-width: 375px) {
+
+    .card_item {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .title_container {
+        padding: 0;
+        align-items: center;
+    }
+
+    .title_container p {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .count_container {
+        margin-bottom: 10px;
+    }
+
+    .image_container {
+        width: 100%;
+        padding: 0 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
