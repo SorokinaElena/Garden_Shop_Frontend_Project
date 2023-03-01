@@ -1,8 +1,8 @@
 .categories_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 37px;
-    margin: 20px 0;
+    gap: 33px;
+    margin: 20px 0 0 0;
 }
 
 @media (max-width: 375px) {
