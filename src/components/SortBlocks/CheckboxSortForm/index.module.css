@@ -1,13 +1,8 @@
 .discont_sort {
-    /* display: flex;
-    align-items: center; */
-    /* gap: 39px; */
     margin-right: 91px;
-    /* position: relative; */
 }
 
 .container {
-  /* display: block; */
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -21,7 +16,6 @@
   width: 40px;
   margin-left: 39px;
   cursor: pointer;
-  /* position: absolute; */
   opacity: 0;
   
 }

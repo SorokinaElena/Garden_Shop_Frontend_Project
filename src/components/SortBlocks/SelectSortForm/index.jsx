@@ -10,9 +10,9 @@ export default function SelectSortForm({ select_products }) {
   const [selectCurrentText, setSelectCurrentText] = useState('by default');
 
   const choose_option = (event) => {
-    const select_current_text = event.target.value
-    setSelectCurrentText(select_current_text)
-    setMenuActive(menuActive ? false : true)
+    const select_current_text = event.target.value;
+    setSelectCurrentText(select_current_text);
+    setMenuActive(menuActive ? false : true);
   };
 
    

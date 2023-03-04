@@ -16,7 +16,9 @@ export const categoryProductsReducer = (state = defaultState, action) => {
     if (action.type === LOAD_CATEGORY_PRODUCTS) {
             firstState = action.payload;
             return action.payload;
-    } else if (action.type === PRICE_SORT_CATEGORY_PRODUCTS) {
+    } 
+    
+    else if (action.type === PRICE_SORT_CATEGORY_PRODUCTS) {
         const {min_value, max_value} = action.payload;
         return state.map(el => {
             if (el.discont_price >= min_value && el.discont_price <= max_value) {
@@ -46,21 +48,6 @@ export const categoryProductsReducer = (state = defaultState, action) => {
             
         }
     }
-    
-    
-    
-    // else if (action.type === GET_DISCONT_CATEGORY_PRODUCTS) {
-    //     if (action.payload === false) {
-    //         console.log(discontState)
-    //         return discontState
-    //         } else {
-    //             discontState = state; //начальный массив
-    //             console.log(discontState)
-    //             return state.filter(el => el.discont_price !== el.price)
-    //     }
-
-
-    // } 
 
     else if (action.type === SELECT_CATEGORY_PRODUCTS) {
             if (action.payload.id === 'default') {

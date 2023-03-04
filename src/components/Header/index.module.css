@@ -114,7 +114,9 @@
     }
 
     .nav_menu {
-        display: flex;
+        /* display: flex; */
+        display: none;
+
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
@@ -130,11 +132,12 @@
         box-shadow: 10px 10px 10px #888888;
         z-index: 2;
 
-        transform: translateX(150%);
+        /* transform: translateX(150%); */
     }
 
     .nav_menu.is_active {
-        transform: translateX(0%);
+        display: flex;
+        /* transform: translateX(0%); */
     }
 
 

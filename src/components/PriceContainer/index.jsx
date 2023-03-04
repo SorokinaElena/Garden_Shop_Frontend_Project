@@ -52,17 +52,6 @@ export default function PriceContainer({price, discont_price, count, page_name})
         }
 }
 
-    // let style_price_container = '';
-         
-    //         if (page_name === 'category_page') {
-    //             style_price_container = 'price_product_card';
-    //         } else if (page_name === 'product_page') {
-    //             style_price_container = 'price_product_descr_card';
-    //             } else if (page_name === 'cart_page') {
-    //             style_price_container = 'price_cart';
-    //                 }
-
-
     let style_price = {};
 
     if (page_name === 'category_page') {

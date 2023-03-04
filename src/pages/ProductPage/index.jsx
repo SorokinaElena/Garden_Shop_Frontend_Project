@@ -4,7 +4,7 @@ import { getProduct } from '../../requests/getProduct';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import ProductDescrCard from '../../components/ProductDescrCard';
-import { getAllProducts } from '../../requests/getAllProducts';
+
 
 export default function ProductPage() {
 
@@ -14,15 +14,13 @@ export default function ProductPage() {
 
   const product = useSelector(state => state.product);
   
-
   useEffect(() => {
     dispatch(getProduct(id))
   }, []);
 
-  
-
   const page_name = 'product_page'
 
+  
   return (
     <div className={['content_wrapper', s.product_page].join(' ')}>
       {

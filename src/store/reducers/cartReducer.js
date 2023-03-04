@@ -43,20 +43,3 @@ export const cartReducer = (state = defaultState, action) => {
             return state
         }
     }
-    
-    
-
-
-// const checkProduct = (state, payload) => {
-//     const target_product = state.find(el => el.id === payload.id)
-//     //  при === не происходит приведение типов! можно убрать одно =
-//     if(target_product) {
-//         target_product.count++
-//         return [...state]
-//     } else {
-//         return [...state, {
-//             ...payload, 
-//             count: 1
-//         }]
-//     }
-// }

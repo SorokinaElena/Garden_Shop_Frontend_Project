@@ -31,16 +31,9 @@ export default function CategoryPage() {
   const categories = useSelector(state => state.categories);
   console.log(categoryProducts);
 
-  
-
   const target_category = categories.filter(el => el.id == category);
   
-  
-
-  const page_name = 'category_page';
-
-  // const price_sort_category_products = dispatch(priceSortCategoryProducts({min_value, max_value}));
-  // 
+  const page_name = 'category_page'; 
 
   const price_sort_category_products = (event) => {
     event.preventDefault();
@@ -64,8 +57,6 @@ export default function CategoryPage() {
   }));
 
   
-
-
   return (
     <div className={['content_wrapper', s.category_page].join(' ')}>
       <h2>
