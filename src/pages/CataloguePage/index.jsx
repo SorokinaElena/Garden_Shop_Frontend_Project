@@ -26,6 +26,7 @@ export default function CataloguePage() {
   const price_sort_all_products = (event) => {
     event.preventDefault();
     const { min_price, max_price } = event.target;
+    console.log(event.target)
     const min_value = min_price.value || 0;
     const max_value = max_price.value || Infinity;
     dispatch(priceSortAllProducts({min_value, max_value}));
@@ -46,9 +47,9 @@ export default function CataloguePage() {
 
   return (
     <div className={['content_wrapper', s.catalogue_page].join(' ')}>
-      <h2>Catalogue</h2>
+      <h2>Catalog</h2>
       <div className={s.sort_form}>
-          <PriceSortForm price_sort_products={price_sort_all_products}/>
+          <PriceSortForm price_sort_products={price_sort_all_products} />
           <CheckboxSortForm get_discont_products={get_discont_all_products} />
           <SelectSortForm select_products={select_all_products} />
       </div>

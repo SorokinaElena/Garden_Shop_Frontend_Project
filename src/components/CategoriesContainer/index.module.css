@@ -8,6 +8,6 @@
 @media (max-width: 375px) {
     .categories_container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 10px;
     }
 }

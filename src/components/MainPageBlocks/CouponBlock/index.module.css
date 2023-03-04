@@ -51,6 +51,10 @@
         height: max-content;
     }    
 
+    .form_container {
+        padding: 0 10px 0 10px;
+    }
+
     .form_container p:first-child {
         margin-top: 20px;
         font-size: 50px;

@@ -21,6 +21,7 @@ export default function OrderForm({ children, page_name, cart }) {
     if(cart) {
       console.log(cart)
     }
+    page_name === 'main_page' ? alert('Discount coupon is sent to your tel. number!') : alert('Thank you for your order!')
     reset();
   };
 

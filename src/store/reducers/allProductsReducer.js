@@ -16,6 +16,7 @@ export const allProductsReducer = (state = defaultState, action) => {
         firstState = action.payload;
         return action.payload
     } 
+
     else if (action.type === PRICE_SORT_ALL_PRODUCTS) {
         const {min_value, max_value} = action.payload;
         return state.map(el => {
@@ -45,7 +46,6 @@ export const allProductsReducer = (state = defaultState, action) => {
             })
             
         }
-
 
     } else if (action.type === SELECT_ALL_PRODUCTS) {
             if (action.payload.id === 'default') {

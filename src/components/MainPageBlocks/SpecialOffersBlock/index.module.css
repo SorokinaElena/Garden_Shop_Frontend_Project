@@ -51,9 +51,8 @@
     }    
 
     .special_offers_block > div {
-        display: flex;
-        justify-content: space-between;
-        gap: 25px;
+        justify-content: space-around;
+        gap: 15px;
     }
 
 }
