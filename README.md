@@ -1,6 +1,9 @@
 figma-template in eng:
 https://www.figma.com/file/q8RUYkoQA4ugi6D9MGTdqT/FE%3A-Final-project?node-id=1%3A313&t=WtdroAuOVg1w6id3-0
 
+project deploy:
+https://elena-sorokina-project-garden-shop.onrender.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
