@@ -28,6 +28,10 @@
     position: relative;
 } 
 
+.select.is_active {
+    box-shadow: 10px 10px 10px #888888;
+}
+
 .select.is_active .select_body {
     display: block;
 } 
@@ -63,7 +67,8 @@
     border-radius: 0 0 7px 7px;
     border-top: 0;
     /* background-color: rgba(51, 153, 51, 0.5); */
-    background-color: rgba(229, 229, 229, 0.5);
+    /* background-color: rgba(229, 229, 229, 0.5); */
+    background-color: rgba(229, 229, 229);
 
     position: absolute;
     left: 0;
@@ -99,4 +104,3 @@
     }
 
 }
-

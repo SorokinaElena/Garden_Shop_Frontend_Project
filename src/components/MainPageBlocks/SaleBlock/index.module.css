@@ -83,10 +83,6 @@
         background-image: url(./data/sale_image.png);
     }
 
-    .info {
-        padding: 60px 0 0 50px;
-    }
-
     .info h3 {
         margin-bottom: 30px;
     }
