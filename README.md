@@ -1,3 +1,6 @@
+figma-template in eng:
+https://www.figma.com/file/q8RUYkoQA4ugi6D9MGTdqT/FE%3A-Final-project?node-id=1%3A313&t=WtdroAuOVg1w6id3-0
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -71,6 +74,3 @@ https://github.com/HaykInanc/telran_project_backend
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-https://www.figma.com/file/2GVvDlER4OFswjR0KOShPn/Garden-(Copy)?node-id=384%3A17&t=zAg7ZYcxyQijlQEn-0
-https://html5book.ru/css3-gradient
-https://react-icons.github.io/react-icons/search?q=bag
