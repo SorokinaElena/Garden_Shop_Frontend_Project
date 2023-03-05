@@ -81,7 +81,7 @@
 @media (max-width: 375px) {
 
     .cart_page {
-        padding: 0 10px;
+        padding: 0 15px;
         margin-bottom: 30px;
     }
 
@@ -91,6 +91,9 @@
 
     .back_to_store_link.empty_card {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }    
 
     .back_to_store_link a {
@@ -109,7 +112,7 @@
     }
 
     .form_container {
-        width: 355px;
+        width: 345px;
         padding: 15px;
     }
 
@@ -121,9 +124,8 @@
         margin-bottom: 25px;
     }
 
+    .cart_items_container .back_to_store_link {
+        width: 345px;
+    }
+
 }
-
-
-
-
-

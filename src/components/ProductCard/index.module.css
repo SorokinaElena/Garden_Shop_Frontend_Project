@@ -89,6 +89,10 @@
         font-size: 16px;
         padding-left: 0;
     }
+
+    .to_cart_btn {
+        height: 52px;
+        top: 100px;
+    }  
     
 }
-

@@ -62,7 +62,7 @@
 @media (max-width: 375px) {
 
     .card_item {
-        width: 100%;
+        max-width: 345px;
         height: auto;
         flex-direction: column;
     }
