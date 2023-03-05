@@ -16,6 +16,10 @@ export default function Header() {
   let total_count = 0;
   cart.map(el => total_count = total_count + el.count);
 
+  const set_menu_active = () => {
+    setMenuActive(menuActive ? false : true)
+  }
+
   
   return (
     <header className={['content_wrapper', s.header].join(' ')}>
@@ -30,11 +34,11 @@ export default function Header() {
       </div>
       
       <nav className={[s.nav_menu, menuActive ? s.is_active : ''].join(' ')}>
-          <Link to='catalogue' className={s.catalog_mobile_menu}>Catalog</Link>
-          <Link to='categories'>Categories</Link>
-          <HashLink to='/#coupon'>Coupon</HashLink>
-          <Link to='sale'>Special offers</Link>
-          <HashLink to='/#contacts'>Contacts</HashLink>
+          <Link to='catalogue' className={s.catalog_mobile_menu} onClick={set_menu_active}>Catalog</Link>
+          <Link to='categories' onClick={set_menu_active}>Categories</Link>
+          <HashLink to='/#coupon' onClick={set_menu_active}>Coupon</HashLink>
+          <Link to='sale'onClick={set_menu_active}>Special offers</Link>
+          <HashLink to='/#contacts' onClick={set_menu_active}>Contacts</HashLink>
       </nav>
         
 
@@ -43,7 +47,7 @@ export default function Header() {
           <div className={cart.length > 0 ? s.count_true : s.count}>{total_count}</div>
       </Link>
 
-      <MenuOutlined style={{'fontSize': '30px'}} className={s.mobile_menu_icon} onClick={( ) => setMenuActive(menuActive ? false : true)}/>
+      <MenuOutlined style={{'fontSize': '30px'}} className={s.mobile_menu_icon} onClick={set_menu_active}/>
 
     </header>
   )
